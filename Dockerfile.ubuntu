@@ -1,5 +1,12 @@
-FROM ubuntu:jammy
-LABEL MAINTAINER="John Rofrano <rofrano@gmail.com>"
+# This code derives from John Rofrano's work, and
+# those who helped him. Many thanks!
+# https://github.com/rofrano/vagrant-docker-provider
+#
+# This fork is simply to ensure CS students approach me for help first,
+# and to apply any local customisations. -Dave
+#
+FROM ubuntu:focal
+LABEL MAINTAINER="David Eyers <dme@cs.otago.ac.nz>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -27,7 +34,7 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == system
     rm -f /lib/systemd/system/basic.target.wants/*; \
     rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-# Enable ssh for vagrant
+# Enable SSH for Vagrant
 RUN systemctl enable ssh.service; 
 EXPOSE 22
 
@@ -37,7 +44,7 @@ RUN useradd -m -G sudo -s /bin/bash vagrant && \
     echo 'vagrant ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/vagrant && \
     chmod 440 /etc/sudoers.d/vagrant
 
-# Establish ssh keys for vagrant
+# Establish SSH keys for Vagrant
 RUN mkdir -p /home/vagrant/.ssh; \
     chmod 700 /home/vagrant/.ssh
 ADD https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub /home/vagrant/.ssh/authorized_keys
