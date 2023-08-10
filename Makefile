@@ -5,9 +5,9 @@
 ## ----------------------------------------------------------------------
 
 # These can be overidden with env vars.
-REGISTRY ?= rofrano
+REGISTRY ?= dme26
 IMAGE_NAME ?= vagrant-provider
-IMAGE_TAG ?= ubuntu
+IMAGE_TAG ?= ubuntu-focal
 IMAGE ?= $(REGISTRY)/$(IMAGE_NAME):$(IMAGE_TAG)
 PLATFORM ?= "linux/amd64,linux/arm64"
 
