@@ -1,11 +1,12 @@
 # Vagrant Docker Provider Image
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Docker Pulls](https://img.shields.io/docker/pulls/rofrano/vagrant-provider?logo=docker&label=docker%20pulls%20%2F%20vagrant-provider)](https://hub.docker.com/repository/docker/rofrano/vagrant-provider)
+[![Docker Pulls](https://img.shields.io/docker/pulls/dme26/vagrant-provider?logo=docker&label=docker%20pulls%20%2F%20vagrant-provider)](https://hub.docker.com/repository/docker/dme26/vagrant-provider)
 
 This repo will build a docker image that can be used as a provider for [Vagrant](https://www.vagrantup.com) as a Linux development environment.
 
-The ready made Docker Hub image can be found here: [rofrano/vagrant-provider:ubuntu](https://hub.docker.com/repository/docker/rofrano/vagrant-provider)
+The ready made Docker Hub image can be found here: [dme26/vagrant-provider:ubuntu](https://hub.docker.com/repository/docker/dme26/vagrant-provider) and is thanks to the project [from which this repository](https://github.com/rofrano/vagrant-docker-provider) is forked.
+
 
 ## Why Vagrant with Docker?
 
